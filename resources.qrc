@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/img">
+        <file>images/login_icon.png</file>
+        <file>images/Oil Company Logo.png</file>
+    </qresource>
+</RCC>
