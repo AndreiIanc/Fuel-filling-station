@@ -1,7 +1,6 @@
 #ifndef LOGIN_H
 #define LOGIN_H
 
-#include "mainwindow.h"
 #include <QDialog>
 
 namespace Ui {
@@ -16,12 +15,14 @@ public:
     explicit Login(QWidget *parent = nullptr);
     ~Login();
 
+signals:
+    void loginAttempted(QString username, QString password);
+
 private slots:
     void on_pushButton_login_clicked();
 
 private:
     Ui::Login *ui;
-    MainWindow *mainWindow;
 };
 
 #endif // LOGIN_H

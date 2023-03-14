@@ -3,4 +3,8 @@
         <file>images/login_icon.png</file>
         <file>images/Oil Company Logo.png</file>
     </qresource>
+    <qresource prefix="/config"/>
+    <qresource prefix="/cfg">
+        <file>config/config.ini</file>
+    </qresource>
 </RCC>

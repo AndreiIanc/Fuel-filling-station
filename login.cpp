@@ -10,6 +10,7 @@ Login::Login(QWidget *parent) :
 {
     ui->setupUi(this);
     setWindowFlags(Qt::Dialog | Qt::MSWindowsFixedSizeDialogHint | Qt::WindowMinimizeButtonHint | Qt::WindowCloseButtonHint);
+    setModal(true);
 }
 
 Login::~Login()
@@ -22,14 +23,5 @@ void Login::on_pushButton_login_clicked()
     QString username = ui->lineEdit_username->text();
     QString password = ui->lineEdit_password->text();
 
-    if(username == "test" && password == "test") {
-        QMessageBox::information(this, "Login", "Username and password are correct");
-        hide();
-        mainWindow = new MainWindow(this);
-        mainWindow->show();
-    }
-    else {
-        QMessageBox::warning(this,"Login", "Username and password are incorrect");
-    }
+    emit loginAttempted(username, password);
 }
-

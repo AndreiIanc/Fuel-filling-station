@@ -17,7 +17,7 @@ Ceating a desktop application for a fuel charging station for agricultural machi
 
 - subtracts from the tanks when purchased and adds a new payment to the database
 - CRUD on customers
-- machine food history
+- tanks history
 
 #### Administrator (store manager/responsible):
 
@@ -28,37 +28,37 @@ Ceating a desktop application for a fuel charging station for agricultural machi
 #### Other requirements:
 
 - Login
+- When the tank is below 10%, the administrator receives a notification by mail that he must refill that tank
 
 ## Database
 
 
 ### Customer Table
 
-- username - string
-- password - string
-- first name - string
-- last name - string
-- phoneNumber - string(10)
+- firstName - varchar(50)
+- lastName - varchar(50)
+- phoneNumber - char(10)
 - birthDate - date
-- creationDate - date
-- combustible - float
-- medium price - float
-- fully paid - float
+- created_at - timestamptz  (default now())
+- combustible - real
+- mediumPrice - real
+- fullyPaid - real
 
 ### Employee Table
 
-- username - string
-- password - string
-- first name - string
-- last name - string
-- phoneNumber -string(10)
+- username - varchar(50)
+- password - varchar(50)
+- firstName - varchar(50)
+- lastName - varchar(50)
+- phoneNumber - char(10)
+- email - varchar(50)
 - birthDate - date
-- creationDate - date
+- created_at - timestamptz (default now())
 - admin - boolean
 
 ### Tank Table
 
 - number - integer
-- capacity - float
-- current level - float
-- last fill - date
+- capacity - real
+- currentLevel - real
+- lastFill - timestamptz (default null)
