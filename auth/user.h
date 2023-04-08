@@ -3,6 +3,7 @@
 
 #include <QString>
 
+// Logged user
 class User
 {
 public:

@@ -2,8 +2,8 @@
 #define DATABASEMANAGER_H
 
 #include "qobject.h"
-#include "settings.h"
-#include "user.h"
+#include "settings/settings.h"
+#include "auth/user.h"
 
 #include <QString>
 #include <QtSql>
