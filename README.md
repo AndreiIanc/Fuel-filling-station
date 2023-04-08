@@ -35,6 +35,7 @@ Ceating a desktop application for a fuel charging station for agricultural machi
 
 ### Customer Table
 
+- id - integer (PK)
 - firstName - varchar(50)
 - lastName - varchar(50)
 - phoneNumber - char(10)
@@ -46,6 +47,7 @@ Ceating a desktop application for a fuel charging station for agricultural machi
 
 ### Employee Table
 
+- id - integer (PK)
 - username - varchar(50)
 - password - varchar(50)
 - firstName - varchar(50)
@@ -58,7 +60,15 @@ Ceating a desktop application for a fuel charging station for agricultural machi
 
 ### Tank Table
 
+- id - integer (PK)
 - number - integer
 - capacity - real
 - currentLevel - real
 - lastFill - timestamptz (default null)
+
+### Combustible
+
+- id - integer (PK)
+- name - varchar(50)
+- price - real
+
