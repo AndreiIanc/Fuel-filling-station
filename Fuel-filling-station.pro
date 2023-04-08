@@ -9,23 +9,40 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    databasemanager.cpp \
-    login.cpp \
     main.cpp \
     mainwindow.cpp \
-    settings.cpp \
-    user.cpp
+    controllers/combustible.controller.cpp \
+    controllers/customer.controller.cpp \
+    controllers/employee.controller.cpp \
+    controllers/tank.controller.cpp \
+    dbconnection/databasemanager.cpp \
+    models/combustible.model.cpp \
+    models/customer.model.cpp \
+    models/employee.model.cpp \
+    models/tank.model.cpp \
+    settings/settings.cpp \
+    auth/login.cpp \
+    auth/user.cpp
 
 HEADERS += \
-    databasemanager.h \
-    login.h \
     mainwindow.h \
-    settings.h \
-    user.h
+    controllers/combustible.controller.h \
+    controllers/customer.controller.h \
+    controllers/employee.controler.h \
+    controllers/tank.controller.h \
+    dbconnection/databasemanager.h \
+    models/combustible.model.h \
+    models/customer.model.h \
+    models/employee.model.h \
+    models/tank.model.h \
+    settings/settings.h \
+    auth/login.h \
+    auth/user.h
 
 FORMS += \
-    login.ui \
-    mainwindow.ui
+    mainwindow.ui \
+    auth/login.ui \
+
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
